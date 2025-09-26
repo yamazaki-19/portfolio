@@ -1,0 +1,17 @@
+//メディアクエリ
+$sp: 768px;
+$tab: 1024px;
+
+@mixin media($breakpoint: $sp) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+// ホバー
+@mixin hover() {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

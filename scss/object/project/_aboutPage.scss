@@ -1,0 +1,474 @@
+@use '../../foundation/settings/variable' as *;
+@use '../../foundation/settings/mixin' as *;
+// プロフィールセクション
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  // 上部プロフィール
+  .about_profile_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 164px;
+    .about_profile_item {
+      display: flex;
+      gap: 135px;
+      align-items: flex-end;
+      .about_profile_img{
+        img{
+        width: 435px;
+        height: auto;
+        display: block;
+        max-width: none;
+      } 
+    }
+      .about_profile_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+
+        h3 {
+          font-size: 24px;
+          margin-top: 10px;
+        }
+
+        .about_profile_name {
+          font-size: 12px;
+          font-weight: 300;
+        }
+
+        .profile_text_item {
+          margin-top: 80px;
+
+          p {
+            line-height: 1.7;
+          }
+
+          p:nth-of-type(4),
+          p:nth-of-type(6) {
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  // イントロダクション
+  .introduction {
+    margin-top: 240px;
+
+    .introduction_title {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .introduction_item {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 105px;
+
+      .introduction_img {
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+
+      .introduction_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+
+        p {
+          line-height: 1.7;
+        }
+        p:nth-of-type(3){
+            margin-top: 24px;
+          }
+        p:nth-of-type(5){
+            margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+// --- SP時のレイアウト調整 ---
+@include media($sp) {
+  .profile {
+    .about_profile_inner {
+      .about_profile_item {
+        flex-direction: column;
+        gap: 40px;
+        align-items:flex-start;
+        .about_profile_img{
+          img{
+            width: 100%;
+            max-width:206px;
+            height: auto;
+            display: block;
+            margin-top: -100px;
+          }
+        }
+        .about_profile_text {
+          text-align: left;
+
+          .about_profile_name {
+            font-size: 10px;
+          }
+
+          h3 {
+            font-size: 16px;
+            margin-top: 10px;
+          }
+
+          .profile_text_item {
+            margin-top: 40px;
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .introduction {
+      margin-top: 100px;
+
+      .introduction_title {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .introduction_item {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 40px;
+        align-items: center;
+
+        .introduction_text {
+          text-align: left;
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 経歴　横スクロール
+.bio_scroll {
+  overflow-x: auto;
+  padding-bottom: 20px ;
+  padding-top: 80px;
+  cursor: none; 
+  position: relative;
+ul {
+    display: flex;
+    border-top: 1px solid var(--colorKey); 
+    position: relative;
+    width: max-content;
+  }
+ // カスタムスクロールバー（Chrome, Edge, Safari）
+ &::-webkit-scrollbar {
+    height: 6px; /* 横スクロールバーの高さ */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #E6E7D7; 
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #5E7939;
+  }
+}
+.bio_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  padding-top: 20px;
+  margin-right: 120px;
+
+  .dot {
+    position: absolute;
+    top: -6px; // 線の上にdot
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: var(--colorKey);
+    border-radius: 50%;
+  }
+
+  time {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--colorBlack);
+  }
+
+  p {
+    margin-top: 18px;
+    width: 225px;
+    font-size: 12px;
+    color: var(--colorBlack);
+    line-height: 1.7;
+  }
+}
+ .bio_cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #E6E7D7 ;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s, transform 0.2s;
+    z-index: 9999;
+    opacity: 0;
+  }
+// 強み
+.strengths{
+    .container_inner_str{
+        max-width: 900px;
+        margin:auto;
+        display: flex;
+    }
+    .strengths_inner{
+        display: flex;
+        margin-top: 80px;
+        flex-direction: column;
+        gap: 80px;
+    }
+    .strengths_item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 240px;
+        h3{
+            width: 220px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            padding: 10px 0;
+            color: var(--maincolor);
+            background-color: var(--colororange);
+
+        }
+        .strengths_text{
+            flex: 1;
+            p{
+                line-height: 1.7;
+            }
+        }
+    }
+    hr{
+        width: 100%;
+        max-width: 900px;
+        border: none;
+        border-top: 1px solid var(--colorKey);
+        margin: 0 auto;
+    }
+}
+// 強みsp
+@include media($sp) {
+  .strengths {
+    .strengths_inner{
+        gap: 40px;
+        margin-top: 40px;
+    }
+    .strengths_item {
+      flex-direction: column; 
+      align-items: center;
+      gap: 40px; 
+
+      h3 {
+        width: 206px; 
+        height: 40px; 
+        padding: 12px 0;
+        justify-content: center; 
+      }
+
+      .strengths_text {
+        width: 100%; 
+      }
+    }
+
+    hr {
+      max-width: 100%;
+    }
+  }
+}
+// スキル
+.skills {
+  .container_inner {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .skills_item {
+    display: flex;
+    background-color: var(--colorlightgreen);
+    padding: 80px 40px 0 80px;
+    height: 510px;
+    justify-content: space-between;
+
+    h3 {
+      flex-shrink: 0;
+      font-size: 24px;
+      color: var(--colorKey);
+    }
+
+    .skills_text {
+      dl {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      dl > div {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+      }
+
+      dt {
+        width: 80px;
+        font-weight: 300;
+        color: var(--colorKey);
+        flex-shrink: 0; 
+      }
+
+      dd {
+        flex: 1;
+        width: 508px; 
+        line-height: 1.7;
+        position: relative;
+        padding-bottom: 40px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: var(--maincolor);
+        }
+        
+      }
+    }div.last dd::after {
+    display: none;
+    }
+  }
+
+ // SP対応
+ @include media($sp) {
+  .skills_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    padding: 40px 20px 0 20px;
+
+    h3 {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .skills_text {
+      dl {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        > div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+
+          dt {
+            width: 100%;
+            font-size: 12px;
+          }
+
+          dd {
+            width: 100%;
+            margin-bottom: 40px;
+            font-size: 14px;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}
+// メッセージ
+.message {
+  display: flex;
+  justify-content: center; 
+
+  .container_inner {
+    max-width: 735px;
+    width: 100%;
+  }
+
+  .message_text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 24px;
+    p:last-child {
+    margin-top: 24px;
+    text-align: center;
+  }
+  }
+
+  .message_title {
+    text-align: center;    // タイトルは中央
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  @include media($sp){
+    .message_text{
+        font-size: 12px;
+    }
+  }
+}
+

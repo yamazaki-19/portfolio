@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- 電話番号が自動的にリンク扱いにされるのを防ぐ。 -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- ファビコン画像の指定。 -->
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+
+    <!-- スマホでホームにサイトを追加したときに表示するアイコン画像の指定。 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png" />
+
+    <!--SNS共有関係-->
+    <meta property="og:url" content="https://eriko-yamazaki.com/" />
+    <meta property="og:title" content="ERIKO YAMAZAKI Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This is the portfolio of Eriko Yamazaki, aspiring web designer." />
+    <meta property="og:image" content="/img/sns_img.png" />
+    <!--絶対パスのURLで設定-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@erimon_nz" />
+    <meta property="og:site_name" content="ERIKO YAMAZAKI Portfolio" />
+    <!--なければ削除-->
+
+    <!--【開発用】検索除外　本番公開したら必ず削除すること！-->
+    <meta name="robots" content="noindex,nofollow" />
+
+    <!--基本のスタイルの設置-->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>ERIKO YAMAZAKI Portfolio</title>
+    <meta name="description" content="This is the portfolio of Eriko Yamazaki, aspiring web designer." />
+  </head>
+  <body>
+    <!-- ローディング画面 -->
+    <div id="loading">
+      <div class="loading-container">
+        <div class="loading-text" id="loading-text">0%</div>
+        <div class="loading-bar">
+          <div class="loading-bar-inner" id="loading-bar-inner"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="container_header">
+        <!-- ロゴ -->
+        <a class="logo" href="/index.html">ERIKO YAMAZAKI</a>
+        <!-- ナビpc -->
+        <nav class="nav nav_pc">
+          <ul class="nav_list">
+            <li><a href="/about.html">Profile</a></li>
+            <li><a href="/index.html#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- ハンバーガーボタン -->
+        <button class="hamburger" aria-label="メニュー開閉">
+          <span class="hamburger_bar"></span>
+          <span class="hamburger_bar"></span>
+          <span class="hamburger_bar"></span>
+        </button>
+      </div>
+      <!-- spオーバーレイメニュー -->
+      <div class="menu_overlay_sp">
+        <ul class="nav_list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">Profile</a></li>
+          <li><a href="/index.html#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- ファーストビュー -->
+    <section class="firstview">
+      <div class="container">
+        <picture class="firstview_img">
+          <source srcset="/img/mv.png" media="(min-width: 768px)" />
+          <img src="/img/mv_sp.png" alt="うさぎの写真" width="1055" height="400" />
+        </picture>
+        <div class="firstview_item">
+          <div class="firstview_title">
+            <h1 class="firstview_title_h1">ERIKO YAMAZAKI <br />portfolio</h1>
+            <p class="firstview_title_item">web design / graphic design</p>
+          </div>
+          <div class="container_inner">
+            <div class="firstview_text">
+              <div class="firstview_text_item">
+                <p>小さな一歩が　心をはずませる</p>
+                <p>やわらかく　あたたかなデザインを</p>
+                <p>A small step makes the heart leap,</p>
+                <p>delivering soft and warm designs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- スクロールバー -->
+    <div class="scroll_bar">
+      <div class="scroll_bar_progress"></div>
+    </div>
+    <!-- トップに戻るボタン -->
+    <div class="top_button">
+      <a href="#"><img src="/img/top_button.png" alt="トップに戻るボタン" width="109" height="98" /></a>
+    </div>
+    <!-- プロフィール -->
+    <section class="profile">
+      <div class="container">
+        <h2 class="title">Profile</h2>
+        <div class="container_inner">
+          <div class="profile_item">
+            <!-- 左：画像 -->
+            <div class="profile_img_col">
+              <img src="/img/plofire_img01.png" alt="正面の写真" width="439" height="614" />
+            </div>
+
+            <!-- 右上：名前 -->
+            <div class="profile_name_col">
+              <p class="name_en">ERIKO YAMAZAKI</p>
+              <p class="name_jp">山崎 江里子</p>
+            </div>
+
+            <!-- 右下：本文 -->
+            <div class="profile_text_col">
+              <h3>「人の思いをデザインでつなぐ」</h3>
+              <p>
+                動物看護師からお菓子屋さんの販売員、店長、販売企画リーダーとキャリアを積んできました。<br />
+                店舗のチラシを作成した際、お客様がそのチラシを握りしめて来店され、とても楽しそうに過ごされていた姿に「思いがデザインでつながった瞬間」を感じました。
+                日々の業務の中で手を動かしながら学びを重ねてきましたが、より深く知識を身につけたいと考え、在職中から現在までオンラインのWebスクールでWebデザインやUI設計、コーディングの基礎を学んでいます。
+              </p>
+              <p>現在は転職活動にも取り組んでいます。</p>
+              <p>
+                「つくって終わり」ではなく、ユーザーの反応を見ながら育てていけるWebの魅力に惹かれ、伝わるデザインでクライアントの思いをつなぐデザイナーを目指しています。
+              </p>
+            </div>
+          </div>
+          <div class="view_more_button">
+            <a href="/about.html">view more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section class="works" id="works">
+      <div class="container">
+        <h2 class="title">Works</h2>
+        <div class="container_inner">
+          <div class="works_inner">
+            <div class="works_item">
+              <a class="works01" href="/works/work01.html">
+                <img src="/img/kurikurien.png" alt="くりくり園 Web site" width="869" height="570" />
+              </a>
+              <div class="works_content">
+                <h3>くりくり園 Web site</h3>
+                <p>静岡県の和洋菓子店たこまん様が運営する自社農園くりくり園の活動内容をまとめたウェブサイトを制作しました。</p>
+                <div class="tag_text">
+                  <p>クライアントワーク</p>
+                  <span>direction / design / cording / WordPress</span>
+                </div>
+                <div class="view_more_button">
+                  <a href="works/work01.html">view more</a>
+                </div>
+              </div>
+            </div>
+            <div class="works_item">
+              <a class="works02" href="/works/work02.html">
+                <img src="/img/create.png" alt="クリエイト美容専門学校 Web site" width="869" height="570" />
+              </a>
+              <div class="works_content">
+                <h3>クリエイト美容専門学校 Web site</h3>
+                <p>スクール課題として、架空の美容専門学校様の新規Webページを、チームで制作しました。私は主にコーディングを担当しました。</p>
+                <div class="tag_text">
+                  <p>チーム制作</p>
+                  <span>cording</span>
+                </div>
+                <div class="view_more_button">
+                  <a href="works/work02.html">view more</a>
+                </div>
+              </div>
+            </div>
+            <div class="works_item">
+              <a class="works03" href="/works/work03.html">
+                <img src="/img/package.png" alt="お菓子パッケージ一覧" width="869" height="570" />
+              </a>
+              <div class="works_content">
+                <h3>お菓子パッケージ一覧</h3>
+                <p>静岡県の和洋菓子店たこまん様の商品パッケージ（スリーブ）を制作しました。</p>
+                <div class="tag_text">
+                  <p>クライアントワーク</p>
+                  <span>graphic design</span>
+                </div>
+                <div class="view_more_button">
+                  <a href="/works/work03.html">view more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="works_sub">
+      <div class="container">
+        <div class="works_sub_inner">
+          <div class="works_item">
+            <a class="works04" href="/works/work04.html">
+              <img src="/img/create02.png" alt="クリエイト美容専門学校 Web site（別案）" width="440" height="290" />
+            </a>
+            <div class="works_content">
+              <div class="tag_text">
+                <p>チーム制作</p>
+              </div>
+              <h3>クリエイト美容専門学校 Web site（別案）</h3>
+            </div>
+          </div>
+          <div class="works_item">
+            <a class="works05" href="/works/work05.html">
+              <img src="/img/kansai.png" alt="株式会社関西ブリッジ運送 Web site" width="440" height="290" />
+            </a>
+            <div class="works_content">
+              <div class="tag_text">
+                <p>個人制作</p>
+                <h3>株式会社関西ブリッジ運送 Web site</h3>
+                <span>design</span>
+              </div>
+            </div>
+          </div>
+          <div class="works_item">
+            <a class="works06" href="/works/work06.html">
+              <img src="/img/vegevege.png" alt="野菜定期便 LP" width="440" height="290" />
+            </a>
+            <div class="works_content">
+              <div class="tag_text">
+                <p>個人制作</p>
+                <h3>野菜定期便 LP</h3>
+                <span>design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="coment">
+      <div class="container">
+        <p>踏み出した一歩が より良い未来につながるように</p>
+        <p>あなたの気持ちに応えるデザインを届けます</p>
+        <p>May your firzst step lead you to a brighter future.</p>
+        <p>I deliver designs that listen and respond to your feelings.</p>
+      </div>
+    </div>
+    <!-- お問い合わせ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="title_flat">Contact</h2>
+        <div class="contact_inner">
+          <div class="contact_item">
+            <!-- 左側 -->
+            <div class="contact_main">
+              <div class="contact_text">
+                <p>ご覧いただき、ありがとうございます。</p>
+                <p>ご不明点がございましたら、こちらのメールアドレスまでお気軽にお問い合わせください。</p>
+                <p>Thank you very much for taking the time to view my portfolio.</p>
+                <p>If you have any questions, please feel free to contact me at this email address.</p>
+              </div>
+              <div class="contact_mail">
+                <a class="mail_btn" href="mailto:j.v.xen19@gmail.com?subject=お問い合わせ">j.v.xen19@gmail.com</a>
+              </div>
+            </div>
+            <!-- 右側 -->
+            <div class="contact_sns">
+              <div class="sns">
+                <a href="https://x.com/erimon_nz?t=QBW5E086LuoUHuEJ1cjNQg&s=09" target="_blank" rel="noopener noreferrer">X</a>
+                <a href="https://note.com/calm_ixora309" target="_blank" rel="noopener noreferrer">note</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="container_footer">
+        <small>© 2025 ERIKO YAMAZAKI</small>
+      </div>
+    </footer>
+    <script src="/js/hamburger.js" defer></script>
+    <script src="/js/scroll.js" defer></script>
+    <script src="/js/fade.js" defer></script>
+    <script src="/js/loading.js" defer></script>
+    <script src="/js/cursor.js" defer></script>
+  </body>
+</html>

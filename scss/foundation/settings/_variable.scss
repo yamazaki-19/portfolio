@@ -1,0 +1,19 @@
+////////////// CSS変数 //////////////
+
+// 色
+:root {
+  --colorBlack: #21180d;
+  --colorKey: #5e7939;
+  --maincolor: #f7f7f2;
+  --colororange:#CB4D05;
+  --colorlightgreen:#E6E7D7;
+}
+// フォント
+:root {
+  --font: 'helvetica', sans-serif;
+}
+// その他設定
+:root {
+  // アニメーション速度
+  --speed: .4s;
+}
